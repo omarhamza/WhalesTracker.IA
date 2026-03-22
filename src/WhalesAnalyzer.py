@@ -11,9 +11,9 @@ def analyze(symbol="BTCEUR"):
     df = pd.DataFrame(trades)
     
     # Nettoyage et typage
-    df['price_eur'] = df['p'].astype(float)
+    df['price'] = df['p'].astype(float)
     df['qty'] = df['q'].astype(float)
-    df['value_eur'] = df['price_eur'] * df['qty']
+    df['value_eur'] = df['price'] * df['qty']
     # 'm' est True si c'est une vente (market taker sell)
     df['side'] = df['m'].apply(lambda x: 'VENTE' if x else 'ACHAT')
 
