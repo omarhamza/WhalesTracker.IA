@@ -1,7 +1,6 @@
 import pandas as pd
 from binance.client import Client
 from sklearn.ensemble import IsolationForest
-from image_recorder import save_whale_detection_plot
 
 client = Client()
 
@@ -25,9 +24,4 @@ def analyze(symbol="BTCEUR"):
     # Détection des Whales (Anomalies)
     whales = df[df['anomaly'] == -1]
 
-    # Enregistrement du graphique
-    save_whale_detection_plot(df, whales, symbol)
-
-    # Affichage console des plus grosses transactions
-    print(f"\n--- Dernières Whales détectées sur {symbol} ---")
-    print(whales[['price_eur', 'qty', 'value_eur', 'side']].tail(5))
+    return df, whales
