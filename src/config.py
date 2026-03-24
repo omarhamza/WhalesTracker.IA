@@ -1,2 +1,5 @@
 # Configuration
+TELEGRAM_TOKEN = ""
+TELEGRAM_CHAT_ID = ""
+
 SYMBOLS = ['BTCEUR', 'ETHEUR', 'SOLEUR']
