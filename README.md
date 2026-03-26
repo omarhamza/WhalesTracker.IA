@@ -36,6 +36,7 @@ python __init__.py
 
 - Isolation Forest est adapté aux anomalies vectorielles, mais il faut surveiller le taux de faux positifs.
 - Ajuster le seuil de sensibilité (`contamination`) selon le contexte de marché.
+- Configurer les seuils personnalisés dans `src/config.py` pour affiner la détection des transactions Whales.
 
 ## 🤝 Contribution
 

@@ -4,8 +4,15 @@ from image_recorder import save_whale_detection_plot
 from send_telegram_message import send_image
 
 for symbol in SYMBOLS:
+    
     # Analyse des transactions et détection des Whales
     df, whales = analyze(symbol)
+
+    # Vérifier si des whales significatifs ont été détectés
+    if not (len(whales) > 0):
+        continue
+    
+    print(f"🐋 {len(whales)} whale(s) détecté(s) pour {symbol}")
 
     # Enregistrement du graphique
     save_whale_detection_plot(df, whales, symbol)
