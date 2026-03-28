@@ -17,8 +17,8 @@ def save_whale_detection_plot(df, whales, symbol):
                     c=color, label=f'Whale {side}', 
                     s=120, marker=marker, edgecolors='black')
 
-    plt.title(f"Détection de Whales en Direct EUR - {symbol}")
-    plt.ylabel("Valeur de la transaction (€)")
+    plt.title(f"{symbol}")
+    plt.ylabel("Quantité")
     plt.xlabel("Flux des 1000 dernières transactions")
     plt.legend()
     plt.grid(True, which='both', linestyle='--', alpha=0.5)
